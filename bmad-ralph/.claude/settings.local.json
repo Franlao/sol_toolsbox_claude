@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api:*)",
+      "Bash(bash ~/bmad-ralph-skill/install.sh --project)",
+      "Bash(mkdir -p /c/Users/solim/PycharmProjects/solithink-skill/.claude/commands /c/Users/solim/PycharmProjects/solithink-skill/.claude/agents)",
+      "Read(//c/Users/solim/PycharmProjects/**)"
+    ]
+  }
+}
