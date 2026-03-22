@@ -59,7 +59,7 @@ AUTOLOOP_CHANGE:
 
 ## Improvement Strategies
 
-When targeting specific criteria:
+### For Engineering Skills (Skill Quality Rubric)
 
 | Criterion | How to Improve |
 |-----------|---------------|
@@ -73,6 +73,21 @@ When targeting specific criteria:
 | Parallelism | Add "launch simultaneously", "batch independent calls" |
 | Observability | Add logging instructions for actions, errors, decisions |
 | User Intent Fidelity | Add "restate the user's request", "do not inflate scope" |
+
+### For Creative/Design Skills (Creative Design Rubric)
+
+| Criterion | How to Improve |
+|-----------|---------------|
+| Design System Thinking | Add CSS variable definitions, semantic token strategy, theme architecture |
+| Visual Uniqueness | Add "research beautiful apps in this domain", "define a mood/visual direction", "never use defaults" |
+| Modern Aesthetics | Add gradient definitions, glassmorphism options, depth through shadows, whitespace philosophy |
+| UX Intelligence | Add explicit loading/empty/error/success state designs with specific visual treatments |
+| Responsive Mastery | Add mobile-first breakpoints, adaptive component mappings (sidebar→bottom nav, modal→sheet) |
+| Color & Typography | Add color palette with HSL values, font pairing strategy, heading/body scale, contrast checks |
+| Animation & Motion | Add specific animation specs: element, trigger, animation type, duration, easing curve |
+| Component Architecture | Add variant tables for each component, composition patterns, reusability rules |
+| Accessibility + Style | Add custom focus indicators, contrast-compliant palette, semantic HTML rules, keyboard flow |
+| Inspiration Sourcing | Add "web search for reference apps", "define 3-5 visual inspirations", "mood before code" |
 
 ## Anti-Patterns (DO NOT)
 

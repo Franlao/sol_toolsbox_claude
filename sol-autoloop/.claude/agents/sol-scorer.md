@@ -76,6 +76,74 @@ Does the workflow stay faithful to what the user actually asked for?
 - 5: Mostly follows but may add extras
 - 10: Explicit rules to restate intent, prevent scope creep, cut unnecessary features
 
+### Mode: Creative Design Rubric (for frontend/UI/design agents)
+
+Use this rubric when the target is a frontend agent, design skill, or any creative-output agent. Select this mode when the target file name contains "frontend", "design", "ui", or "ux", or when the user specifies `metric:design`.
+
+Read every target file, then score EACH criterion on 0-10:
+
+#### 1. Design System Thinking (0-10)
+Does the agent create/use a real design system (tokens, variables, semantic colors) instead of hardcoded CSS?
+- 0: Uses raw colors, inline styles, no system
+- 5: Mentions Tailwind/tokens but no concrete guidance
+- 10: Explicit design token strategy, semantic naming, CSS variables, theme-ready architecture
+
+#### 2. Visual Uniqueness (0-10)
+Does the agent push for original, distinctive designs instead of generic templates?
+- 0: Default shadcn/bootstrap out of the box
+- 5: Customizes existing components
+- 10: Creates a unique visual identity — explicit instruction to find inspiration, define a visual direction, avoid generic looks
+
+#### 3. Modern Aesthetics (0-10)
+Does the agent use current design trends (2025-2026) — gradients, glassmorphism, subtle shadows, depth, whitespace?
+- 0: Flat, unstyled, 2015-era design
+- 5: Some modern elements mentioned
+- 10: Explicit instructions for gradients, micro-interactions, depth, sophisticated color palettes, modern typography
+
+#### 4. UX Intelligence (0-10)
+Does the agent think about user flows, loading states, empty states, error states, transitions?
+- 0: Just the happy path
+- 5: Mentions error states
+- 10: Explicit coverage of loading, empty, error, success states + user flow thinking + feedback patterns (toasts, confirmations)
+
+#### 5. Responsive Mastery (0-10)
+Does the agent plan for mobile-first, breakpoints, touch targets, adaptive layouts?
+- 0: Desktop only
+- 5: "Make it responsive" without specifics
+- 10: Mobile-first strategy, specific breakpoints, touch targets, adaptive components (drawer vs modal, etc.)
+
+#### 6. Color & Typography (0-10)
+Does the agent define a color palette strategy and typography hierarchy?
+- 0: Uses default colors and fonts
+- 5: Picks a palette but no hierarchy
+- 10: Primary/secondary/accent palette, font pairing strategy, heading/body hierarchy, contrast ratios considered
+
+#### 7. Animation & Motion (0-10)
+Does the agent use motion purposefully — transitions, micro-interactions, feedback?
+- 0: No animation mentioned
+- 5: Basic hover effects
+- 10: Transition strategy (page transitions, component enter/exit), micro-interactions (button feedback, loading spinners), motion with purpose (not gratuitous)
+
+#### 8. Component Architecture (0-10)
+Does the agent design reusable, variant-rich components instead of one-off implementations?
+- 0: Monolithic pages, copy-paste components
+- 5: Some reusable components mentioned
+- 10: Atomic/compound component strategy, explicit variants (sizes, states), composition patterns, no duplication
+
+#### 9. Accessibility + Style (0-10)
+Does the agent maintain accessibility WITHOUT sacrificing aesthetics?
+- 0: No accessibility
+- 5: Mentions WCAG but no specifics
+- 10: Semantic HTML, keyboard navigation, focus indicators that match the design, contrast-compliant color choices, screen reader friendly
+
+#### 10. Inspiration Sourcing (0-10)
+Does the agent reference real designs, existing beautiful products, or mood/direction for the visual identity?
+- 0: Designs from nothing, no references
+- 5: Generic references ("like a modern SaaS")
+- 10: Explicit instruction to research existing beautiful apps in the same domain, reference specific design patterns (Dribbble, Awwwards-level), define a mood/visual direction before coding
+
+Output format uses the same `AUTOLOOP_SCORE` template but with these 10 criteria instead.
+
 ### Mode: Test Coverage
 
 Run the test command and parse coverage output. Score = coverage percentage.
