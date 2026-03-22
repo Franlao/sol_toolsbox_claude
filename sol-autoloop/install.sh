@@ -34,7 +34,7 @@ mkdir -p "$INSTALL_PATH/commands"
 mkdir -p "$INSTALL_PATH/agents"
 
 echo -e "\033[1;33mInstalling commands...\033[0m"
-for file in "$SCRIPT_DIR/.claude/commands"/sol-autoloop*.md; do
+for file in "$SCRIPT_DIR/.claude/commands"/sol-*.md; do
     fname=$(basename "$file")
     cp "$file" "$INSTALL_PATH/commands/$fname"
     echo -e "  \033[0;32m+\033[0m commands/$fname"
@@ -47,7 +47,7 @@ for file in "$SCRIPT_DIR/.claude/agents"/sol-*.md; do
     echo -e "  \033[0;32m+\033[0m agents/$fname"
 done
 
-CMD_COUNT=$(ls "$INSTALL_PATH/commands"/sol-autoloop*.md 2>/dev/null | wc -l)
+CMD_COUNT=$(ls "$INSTALL_PATH/commands"/sol-*.md 2>/dev/null | wc -l)
 AGENT_COUNT=$(ls "$INSTALL_PATH/agents"/sol-*.md 2>/dev/null | wc -l)
 
 echo ""

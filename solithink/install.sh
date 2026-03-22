@@ -38,7 +38,8 @@ mkdir -p "$INSTALL_PATH/agents"
 
 # Install commands
 echo -e "\033[1;33mInstalling commands...\033[0m"
-for file in "$SCRIPT_DIR/.claude/commands"/st*.md; do
+for file in "$SCRIPT_DIR/.claude/commands"/st*.md "$SCRIPT_DIR/.claude/commands"/sol-update.md; do
+    [ -f "$file" ] || continue
     fname=$(basename "$file")
     cp "$file" "$INSTALL_PATH/commands/$fname"
     echo -e "  \033[0;32m+\033[0m commands/$fname"
