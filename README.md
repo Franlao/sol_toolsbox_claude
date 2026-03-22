@@ -12,6 +12,7 @@ Chaque dossier est un skill independant avec son propre installeur.
 |-------|------------|-----------|
 | [bmad-ralph](./bmad-ralph/) | Build entire projects A-Z — planification structuree + execution autonome | `/project:br-*` |
 | [solithink](./solithink/) | Multi-expert thinking — 8 experts analysent, debattent, planifient | `/project:st-*` |
+| [sol-autoloop](./sol-autoloop/) | Boucle d'amelioration autonome — modify, score, keep/revert, repeat (Karpathy) | `/project:sol-autoloop*` |
 
 ## Installation
 
@@ -41,12 +42,13 @@ bash ~/sol_toolsbox_claude/bmad-ralph/install.sh --global
 ## Workflow recommande
 
 ```
-soliThink pense → BMAD-Ralph construit
+soliThink pense → BMAD-Ralph construit → AutoLoop ameliore
 
-/project:st "Mon idee"       → Plan expert-driven (8 experts)
-/project:st-to-bmad          → Conversion automatique
-/project:br-architect         → Architecture detaillee
-/project:br-build auto        → Construction autonome
+/project:st "Mon idee"                    → Plan expert-driven (8 experts)
+/project:st-to-bmad                       → Conversion automatique
+/project:br-architect                      → Architecture detaillee
+/project:br-build auto                     → Construction autonome
+/project:sol-autoloop "skill:bmad-ralph"   → Amelioration continue
 ```
 
 ## Ajouter un nouveau skill
